@@ -84,7 +84,8 @@ class Lines extends Serializable {
       }
       out.toString()
     } catch {
-      case NonFatal(_) =>
+      case NonFatal(e) =>
+        e.printStackTrace()
         if (clues.values.isEmpty) {
           message
         } else {
